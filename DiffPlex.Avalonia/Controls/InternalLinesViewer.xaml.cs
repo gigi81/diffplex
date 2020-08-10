@@ -42,7 +42,7 @@ namespace DiffPlex.Avalonia.Controls
 
         private ColumnDefinition ValueColumn => this.Grid.ColumnDefinitions[2];
 
-        private StackPanel NumberPanel => this.FindControl<StackPanel>("StackPanel");
+        private StackPanel NumberPanel => this.FindControl<StackPanel>("NumberPanel");
 
         private StackPanel OperationPanel => this.FindControl<StackPanel>("OperationPanel");
 

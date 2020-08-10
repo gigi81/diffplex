@@ -1,0 +1,13 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:diffplex="clr-namespace:DiffPlex.Avalonia.Controls;assembly=DiffPlex.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DiffPlex.Avalonia.Demo.MainWindow"
+        Title="DiffPlex.Avalonia.Demo">
+
+  <Grid ColumnDefinitions="*" RowDefinitions="*">
+    <diffplex:InlineDiffViewer x:Name="DiffView" Grid.Row="0" Grid.Column="0" />
+  </Grid>
+</Window>
