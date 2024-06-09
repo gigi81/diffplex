@@ -38,62 +38,62 @@ namespace DiffPlex.Avalonia.Controls
         /// <summary>
         /// The property of change type symbol foreground brush.
         /// </summary>
-        public static readonly StyledProperty<Brush> ChangeTypeForegroundProperty = RegisterDependencyProperty<Brush>("ChangeTypeForeground", new SolidColorBrush(Color.FromArgb(255, 128, 128, 128)));
+        public static readonly StyledProperty<Brush> ChangeTypeForegroundProperty = RegisterDependencyProperty<Brush>(nameof(ChangeTypeForeground), new SolidColorBrush(Color.FromArgb(255, 128, 128, 128)));
 
         /// <summary>
         /// The property of text inserted background brush.
         /// </summary>
-        public static readonly StyledProperty<Brush> InsertedForegroundProperty = RegisterDependencyProperty<Brush>("InsertedForeground", new SolidColorBrush(Color.FromArgb(255, 64, 128, 160)));
+        public static readonly StyledProperty<Brush> InsertedForegroundProperty = RegisterDependencyProperty<Brush>(nameof(InsertedForeground), new SolidColorBrush(Color.FromArgb(255, 64, 128, 160)));
 
         /// <summary>
         /// The property of text inserted background brush.
         /// </summary>
-        public static readonly StyledProperty<Brush> InsertedBackgroundProperty = RegisterDependencyProperty<Brush>("InsertedBackground", new SolidColorBrush(Color.FromArgb(64, 96, 216, 32)));
+        public static readonly StyledProperty<Brush> InsertedBackgroundProperty = RegisterDependencyProperty<Brush>(nameof(InsertedBackground), new SolidColorBrush(Color.FromArgb(64, 96, 216, 32)));
 
         /// <summary>
         /// The property of text inserted background brush.
         /// </summary>
-        public static readonly StyledProperty<Brush> DeletedForegroundProperty = RegisterDependencyProperty<Brush>("DeletedForeground", new SolidColorBrush(Color.FromArgb(255, 64, 128, 160)));
+        public static readonly StyledProperty<Brush> DeletedForegroundProperty = RegisterDependencyProperty<Brush>(nameof(DeletedForeground), new SolidColorBrush(Color.FromArgb(255, 64, 128, 160)));
 
         /// <summary>
         /// The property of text inserted background brush.
         /// </summary>
-        public static readonly StyledProperty<Brush> DeletedBackgroundProperty = RegisterDependencyProperty<Brush>("DeletedBackground", new SolidColorBrush(Color.FromArgb(64, 216, 32, 32)));
+        public static readonly StyledProperty<Brush> DeletedBackgroundProperty = RegisterDependencyProperty<Brush>(nameof(DeletedBackground), new SolidColorBrush(Color.FromArgb(64, 216, 32, 32)));
 
         /// <summary>
         /// The property of text inserted background brush.
         /// </summary>
-        public static readonly StyledProperty<Brush> UnchangedForegroundProperty = RegisterDependencyProperty<Brush>("UnchangedForeground", new SolidColorBrush(Color.FromArgb(255, 64, 128, 160)));
+        public static readonly StyledProperty<Brush> UnchangedForegroundProperty = RegisterDependencyProperty<Brush>(nameof(UnchangedForeground), new SolidColorBrush(Color.FromArgb(255, 64, 128, 160)));
 
         /// <summary>
         /// The property of text inserted background brush.
         /// </summary>
-        public static readonly StyledProperty<Brush> UnchangedBackgroundProperty = RegisterDependencyProperty<Brush>("UnchangedBackground", new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)));
+        public static readonly StyledProperty<Brush> UnchangedBackgroundProperty = RegisterDependencyProperty<Brush>(nameof(UnchangedBackground), new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)));
 
         /// <summary>
         /// The property of grid splitter background brush.
         /// </summary>
-        public static readonly AvaloniaProperty SplitterForegroundProperty = RegisterDependencyProperty<Brush>("SplitterForeground");
+        public static readonly StyledProperty<Brush> SplitterForegroundProperty = RegisterDependencyProperty<Brush>(nameof(SplitterForeground));
 
         /// <summary>
         /// The property of grid splitter background brush.
         /// </summary>
-        public static readonly AvaloniaProperty SplitterBackgroundProperty = RegisterDependencyProperty<Brush>("SplitterBackground", new SolidColorBrush(Color.FromArgb(64, 128, 128, 128)));
+        public static readonly StyledProperty<Brush> SplitterBackgroundProperty = RegisterDependencyProperty<Brush>(nameof(SplitterBackground), new SolidColorBrush(Color.FromArgb(64, 128, 128, 128)));
 
         /// <summary>
         /// The property of grid splitter border brush.
         /// </summary>
-        public static readonly AvaloniaProperty SplitterBorderBrushProperty = RegisterDependencyProperty<Brush>("SplitterBorderBrush");
+        public static readonly StyledProperty<Brush> SplitterBorderBrushProperty = RegisterDependencyProperty<Brush>(nameof(SplitterBorderBrush));
 
         /// <summary>
         /// The property of grid splitter border thickness.
         /// </summary>
-        public static readonly AvaloniaProperty SplitterBorderThicknessProperty = RegisterDependencyProperty<Thickness>("SplitterBorderThickness");
+        public static readonly StyledProperty<Thickness> SplitterBorderThicknessProperty = RegisterDependencyProperty<Thickness>(nameof(SplitterBorderThickness));
 
         /// <summary>
         /// The property of grid splitter width.
         /// </summary>
-        public static readonly AvaloniaProperty SplitterWidthProperty = RegisterDependencyProperty<double>("SplitterWidth", 5);
+        public static readonly StyledProperty<double> SplitterWidthProperty = RegisterDependencyProperty<double>(nameof(SplitterWidth), 5);
 
         /// <summary>
         /// Initializes a new instance of the InlineDiffViewer class.
@@ -102,7 +102,7 @@ namespace DiffPlex.Avalonia.Controls
         {
             InitializeComponent();
 
-            ContentPanel.Bind(ForegroundProperty, new Binding("Foreground") { Source = this, Mode = BindingMode.OneWay });
+            ContentPanel.Bind(ForegroundProperty, new Binding(nameof(Foreground)) { Source = this, Mode = BindingMode.OneWay });
         }
 
         private void InitializeComponent()
@@ -118,7 +118,7 @@ namespace DiffPlex.Avalonia.Controls
         [Category("Appearance")]
         public DiffPaneModel DiffModel
         {
-            get => (DiffPaneModel)GetValue(DiffModelProperty);
+            get => GetValue(DiffModelProperty);
             set
             {
                 SetValue(DiffModelProperty, value);
@@ -132,7 +132,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush LineNumberForeground
         {
-            get => (Brush)GetValue(LineNumberForegroundProperty);
+            get => GetValue(LineNumberForegroundProperty);
             set => SetValue(LineNumberForegroundProperty, value);
         }
 
