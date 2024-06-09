@@ -6,12 +6,12 @@ using System.IO;
 
 namespace DiffPlex.Avalonia.Demo
 {
-    public class MainWindow : Window
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            this.FindControl<InlineDiffViewer>("DiffView").SetDiffModel(new FileInfo(@"C:\Temp\compare1.txt"), new FileInfo(@"C:\Temp\compare2.txt"));
+            this.FindControl<InlineDiffViewer>("DiffView").SetDiffModel(new FileInfo(@"D:\Temp\compare1.md"), new FileInfo(@"D:\Temp\compare2.md"));
         }
 
         private void InitializeComponent()

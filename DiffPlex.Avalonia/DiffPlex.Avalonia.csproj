@@ -1,8 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>8.0</LangVersion>
+    <Version>1.4.0</Version>
+    <PackageTags>diff, avalonia</PackageTags>
+    <Description>DiffPlex.Avalonia is an Avalonia control library that allows you to programatically render visual text diffs in your application.</Description>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <FileVersion>1.4.0.0</FileVersion>
+    <ApplicationIcon>..\DiffPlex.ico</ApplicationIcon>
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\License.txt" Link="License.txt" />
+    <Content Include="..\DiffPlex.ico" Link="DiffPlex.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="**\*.xshd;**\*.resx;" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
@@ -14,8 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.0-preview2" />
-    <PackageReference Include="DiffPlex" Version="1.6.3" />
+    <ProjectReference Include="..\DiffPlex\DiffPlex.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.10" />
   </ItemGroup>
 
   <ItemGroup>

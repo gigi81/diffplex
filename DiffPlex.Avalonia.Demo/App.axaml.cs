@@ -4,7 +4,7 @@ using Avalonia.Markup.Xaml;
 
 namespace DiffPlex.Avalonia.Demo
 {
-    public class App : Application
+    public partial class App : Application
     {
         public override void Initialize()
         {

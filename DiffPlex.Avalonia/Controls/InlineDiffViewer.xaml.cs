@@ -20,6 +20,7 @@ namespace DiffPlex.Avalonia.Controls
     /// </summary>
     public partial class InlineDiffViewer : UserControl
     {
+        #region Properties
         /// <summary>
         /// The property of diff model.
         /// </summary>
@@ -94,7 +95,8 @@ namespace DiffPlex.Avalonia.Controls
         /// The property of grid splitter width.
         /// </summary>
         public static readonly StyledProperty<double> SplitterWidthProperty = RegisterDependencyProperty<double>(nameof(SplitterWidth), 5);
-
+        #endregion
+        
         /// <summary>
         /// Initializes a new instance of the InlineDiffViewer class.
         /// </summary>
@@ -112,6 +114,7 @@ namespace DiffPlex.Avalonia.Controls
 
         private InternalLinesViewer ContentPanel => this.FindControl<InternalLinesViewer>("ContentPanel");
 
+        #region Properties
         /// <summary>
         /// Gets or sets the side by side diff model.
         /// </summary>
@@ -157,7 +160,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush ChangeTypeForeground
         {
-            get => (Brush)GetValue(ChangeTypeForegroundProperty);
+            get => GetValue(ChangeTypeForegroundProperty);
             set => SetValue(ChangeTypeForegroundProperty, value);
         }
 
@@ -167,7 +170,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush InsertedForeground
         {
-            get => (Brush)GetValue(InsertedForegroundProperty);
+            get => GetValue(InsertedForegroundProperty);
             set => SetValue(InsertedForegroundProperty, value);
         }
 
@@ -177,7 +180,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush InsertedBackground
         {
-            get => (Brush)GetValue(InsertedBackgroundProperty);
+            get => GetValue(InsertedBackgroundProperty);
             set => SetValue(InsertedBackgroundProperty, value);
         }
 
@@ -187,7 +190,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush DeletedForeground
         {
-            get => (Brush)GetValue(DeletedForegroundProperty);
+            get => GetValue(DeletedForegroundProperty);
             set => SetValue(DeletedForegroundProperty, value);
         }
 
@@ -197,7 +200,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush DeletedBackground
         {
-            get => (Brush)GetValue(DeletedBackgroundProperty);
+            get => GetValue(DeletedBackgroundProperty);
             set => SetValue(DeletedBackgroundProperty, value);
         }
 
@@ -207,7 +210,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush UnchangedForeground
         {
-            get => (Brush)GetValue(UnchangedForegroundProperty);
+            get => GetValue(UnchangedForegroundProperty);
             set => SetValue(UnchangedForegroundProperty, value);
         }
 
@@ -217,7 +220,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush UnchangedBackground
         {
-            get => (Brush)GetValue(UnchangedBackgroundProperty);
+            get => GetValue(UnchangedBackgroundProperty);
             set => SetValue(UnchangedBackgroundProperty, value);
         }
 
@@ -227,7 +230,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush SplitterForeground
         {
-            get => (Brush)GetValue(SplitterForegroundProperty);
+            get => GetValue(SplitterForegroundProperty);
             set => SetValue(SplitterForegroundProperty, value);
         }
 
@@ -237,7 +240,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush SplitterBackground
         {
-            get => (Brush)GetValue(SplitterBackgroundProperty);
+            get => GetValue(SplitterBackgroundProperty);
             set => SetValue(SplitterBackgroundProperty, value);
         }
 
@@ -247,7 +250,7 @@ namespace DiffPlex.Avalonia.Controls
         [Bindable(true)]
         public Brush SplitterBorderBrush
         {
-            get => (Brush)GetValue(SplitterBackgroundProperty);
+            get => GetValue(SplitterBackgroundProperty);
             set => SetValue(SplitterBackgroundProperty, value);
         }
 
@@ -258,7 +261,7 @@ namespace DiffPlex.Avalonia.Controls
         [Category("Appearance")]
         public Thickness SplitterBorderThickness
         {
-            get => (Thickness)GetValue(SplitterBorderThicknessProperty);
+            get => GetValue(SplitterBorderThicknessProperty);
             set => SetValue(SplitterBorderThicknessProperty, value);
         }
 
@@ -269,10 +272,11 @@ namespace DiffPlex.Avalonia.Controls
         [Category("Appearance")]
         public double SplitterWidth
         {
-            get => (double)GetValue(SplitterWidthProperty);
+            get => GetValue(SplitterWidthProperty);
             set => SetValue(SplitterWidthProperty, value);
         }
-
+        #endregion
+        
         /// <summary>
         /// Sets a new diff model.
         /// </summary>

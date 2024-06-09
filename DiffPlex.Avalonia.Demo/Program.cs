@@ -20,6 +20,6 @@ namespace DiffPlex.Avalonia.Demo
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToDebug();
+                .LogToTrace();
     }
 }
